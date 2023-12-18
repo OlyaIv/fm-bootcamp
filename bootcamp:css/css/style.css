@@ -1,0 +1,99 @@
+/* this is my first css file */
+
+body {
+   font-family: Arial, Helvetica, sans-serif; /* sans-serif - without styling or so. Why 3 - it checs if there's first on those fonts and moves til lthe end */
+   background-color: #F2E0C9; /* #ffffcc - light yellow. identigying lvl of red yellow and blue */
+}
+div{
+    flex-flow: row nowrap;
+}
+p {
+    color: #595047;
+}
+
+h1 {
+   border: 5px dotted pink;
+   color: black; /* #009900 - dark green */
+   font-size: 2em; /* 2em - 2 times bigger than the default size */
+   text-align: center; /* text-align - aligning text */
+   text-align: center; /* text-align - aligning text */
+}
+
+blockquote{
+    border: 5px double #0D0D0D;
+    font-family: Georgia, 'Times New Roman', Times, serif; 
+
+    font-style: italic; /* italic - italic text */
+    padding: 0.5rem; /* padding - space between the border and the text */
+    text-align: center;
+}
+
+cite {
+    display: block; /* display - how the element is displayed. block - takes the whole line */
+    font-size: 1.2rem;
+    font-style: normal; /* normal - normal text */
+    text-align: right;
+}
+
+.backgroundcolour{
+    background-image: url(http://placekitten.com/200/300) ; /* #ffccff - light pink */
+    height: 300px;
+    text-align: center;
+}
+
+ul a:link{  /* all unvisited links inside unordered list */
+    text-decoration: none; /* removes an underline */
+    color: #ff0000; /* #ff0000 - red */
+    font-weight: bold;
+}
+
+ul a:visited{ /* all visited links inside unordered list */
+    text-decoration: none; /* removes an underline */
+    color: rgb(167, 181, 41); /* #ff0000 - red */
+    font-weight: normal;
+    font-size: 2rem;
+}
+
+a:hover{
+    text-decoration: underline; /* underline - underlines the text */
+    color: orange; /* #ff0000 - red */
+    background-color: chartreuse;
+}
+
+fieldset {
+	border: 1px solid black;
+	border-radius: 10px;
+	margin-bottom: 2rem;
+}
+
+input,textarea,select {
+	display: block;
+	margin-bottom: 2rem;
+	width: 20rem;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1rem;
+	padding: 0 1rem;
+	border-radius: 10px;
+	border: none;
+}
+button{
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+button:hover{
+    background-color: #4CAF50; /* Green */
+    color: white;
+}
+section{
+    flex-basis: 57%;
+	margin: 3% 10%;
+
+}
+
+
+
+
