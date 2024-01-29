@@ -1,0 +1,38 @@
+@keyframes spin{
+to {
+transform: rotate(360deg);
+}
+}
+
+.loading-dog{
+    font-size: 50px;
+    text-align: center;
+    animation: 2s linear spin infinite;
+    display: none;
+}
+
+.dog-img{
+    display: none;
+}
+
+.show{
+    display: block;
+}
+
+#dog-breed{
+    height: 2.5rem;
+    display: flex; 
+    justify-content: center;
+    align-content: center;
+    margin: 2rem auto 1rem auto;
+}
+
+.breed-img{
+    max-width: 600px;
+    display: flex; 
+    justify-content: center;
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+

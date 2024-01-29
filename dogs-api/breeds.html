@@ -6,21 +6,26 @@
     content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dog breeds</title>
+    <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
     <header>
         <nav>
-            <select id="dog-breed" name="dog-breed">
-                <option selected>Please select a dog breed</option>
-                <!-- <option value="api-value">display api values</option> -->
-                
+                    <select id="dog-breed" name="dog-breed">
+                        <option selected>Select a dog</option>
+      
+                    </select>
 
-            </select>
         </nav>
     </header>
     <div class="breed-img">
-        
+        <img src="../portfolio/img/welcome-mssg.png" alt="🐶" class="dog-img show">
     </div>
+    <div class="loading-dog">
+        🐶
+    </div>
+    
+
     <script src="./breeds.js"></script>
 </body>
 </html>

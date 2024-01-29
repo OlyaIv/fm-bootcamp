@@ -1,5 +1,7 @@
 const ALL_BREEDS_URL = 'https://dog.ceo/api/breeds/list/all';
 const selectElement = document.querySelector('#dog-breed');
+const img = document.querySelector('.dog-img');
+const spinner = document.querySelector('.loading-dog');
 
 fetch(ALL_BREEDS_URL)
     .then(function(response){
@@ -19,29 +21,35 @@ fetch(ALL_BREEDS_URL)
         }
     });
 
-
-    selectElement
-    .addEventListener('change', function(event){
+    selectElement.addEventListener('change', function(event){
     // listening whenever user changes to something elese
-    const selectedBreed = event.target.value; // or event.target because selectElement === event.target 
 
-    displayImage(selectedBreed);
-    })
+    let breedUrl = `https://dog.ceo/api/breed/${event.target.value}/images/random`;
 
-function displayImage(selectedBreed){
-    let breedUrl = `https://dog.ceo/api/breed/${selectedBreed}/images/random`;
-    
-    fetch(breedUrl)
-    .then(function(response){
-        return response.json();
+    displayImage(breedUrl);
     })
-    .then(function(data){
-        const img = document.createElement('img');
-        img.src = data.message;
-        img.alt = 'dog image';
-        
-        document.querySelector('.breed-img').removeChild(document.querySelector('.breed-img').firstChild);
-        document.querySelector('.breed-img').appendChild(img);
+ 
+    function displayImage(url){
+        spinner.classList.add('show');
+        img.classList.remove('show');
+
+        fetch(url)
+        .then(function(response){
+            return response.json();
+        })
+        .then(function(data){
+            img.src = data.message;
+            
+            // this is another way to remove the previous image
+            // document.querySelector('.breed-img').removeChild(document.querySelector('.breed-img').firstChild);
+            // document.querySelector('.breed-img').appendChild(img);
+        })
+        // spinner.classList.remove('show');
+        // img.classList.add('show');
+    }
+
+    img.addEventListener('load', function(){
+        spinner.classList.remove('show');
+        img.classList.add('show');
     })
-}
 
