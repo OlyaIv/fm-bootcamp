@@ -72,9 +72,9 @@ nav a{
     text-align: left;
 }
 .aboutMePic{
-    width: 600px;
+    max-width: 50%;
+
     display: flex;
-    flex-basis: 50% ;
 }
 
 .aboutmeText{
@@ -126,9 +126,11 @@ footer ul{
 }
 
 footer{
+    margin-top: 2rem;
     margin-bottom: 2rem;
     text-align: center;
 }
+
 footer li{
     display: inline-block;
 }
@@ -145,6 +147,10 @@ footer li a:hover, nav li a:hover, .introText a:hover, .aboutmeText a:hover {
     background-color: #67595A;
     color: lightgoldenrodyellow;
     border-radius: 10px;
+}
+
+.try-me-out{
+    margin-right: 1rem;
 }
 
 
